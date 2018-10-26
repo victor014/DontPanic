@@ -1,0 +1,56 @@
+.fondo{
+    -fx-background-color:#020202;
+}
+.menu{
+    -fx-background-color:#0d324d;
+    -fx-base:#020202;
+}
+.menu .label{
+    -fx-text-fill:#fff;
+}
+.progress-bar > .track{
+    -fx-text-box-border: #0d324d;
+    -fx-control-inner-background: #37718e;
+}
+
+.keyword {
+    -fx-fill: purple;
+    -fx-font-weight: bold;
+}
+.semicolon {
+    -fx-font-weight: bold;
+}
+.paren {
+    -fx-fill: firebrick;
+    -fx-font-weight: bold;
+}
+.bracket {
+    -fx-fill: darkgreen;
+    -fx-font-weight: bold;
+}
+.brace {
+    -fx-fill: teal;
+    -fx-font-weight: bold;
+}
+.string {
+    -fx-fill: blue;
+}
+
+.comment {
+	-fx-fill: cadetblue;
+}
+
+.paragraph-box:has-caret {
+    -fx-background-color: #f2f9fc;
+}
+
+
+.Tab
+{
+    -fx-background-color: #020202;
+    -fx-color:#000;
+}
+
+.paneIzq{
+    -fx-background-color: #BDBDBD;
+}

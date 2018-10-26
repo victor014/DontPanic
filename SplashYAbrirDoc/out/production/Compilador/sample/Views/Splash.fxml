@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ProgressBar?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="335.0" prefWidth="600.0" style="-fx-background-color: #fff;" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Splash">
+   <children>
+      <ImageView fitHeight="370.0" fitWidth="600.0" layoutY="-1.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../imagenes/splash.gif" />
+         </image>
+      </ImageView>
+      <ProgressBar fx:id="pro" layoutX="110.0" layoutY="311.0" prefHeight="18.0" prefWidth="380.0" progress="0.0" stylesheets="@../estilos.css" />
+      <Label fx:id="lbPro" layoutX="503.0" layoutY="312.0" prefHeight="17.0" prefWidth="72.0" textFill="WHITE" />
+   </children>
+</AnchorPane>

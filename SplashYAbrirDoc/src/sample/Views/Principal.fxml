@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Accordion?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.control.TreeView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane prefHeight="600.0" prefWidth="960.0" styleClass="fondo" stylesheets="@../estilos.css" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controllers.Controller">
+   <children>
+      <BorderPane>
+         <center>
+            <VBox prefHeight="600.0" prefWidth="960.0" BorderPane.alignment="CENTER">
+               <children>
+                  <TabPane prefHeight="500.0" prefWidth="200.0" style="-fx-background-color: #020202;" tabClosingPolicy="UNAVAILABLE">
+                    <tabs>
+                      <Tab styleClass="Tab" text="Archivo1.dnc">
+                           <content>
+                              <VBox prefHeight="390.0" prefWidth="960.0">
+                                 <children>
+                                    <HBox fx:id="panesote" prefHeight="412.0" prefWidth="960.0" VBox.vgrow="ALWAYS" />
+                                 </children>
+                              </VBox>
+                           </content>
+                      </Tab>
+                    </tabs>
+                  </TabPane>
+                  <TextArea fx:id="txtConsola" prefHeight="150.0" prefWidth="200.0" />
+               </children>
+            </VBox>
+         </center>
+         <top>
+            <MenuBar styleClass="menu" BorderPane.alignment="CENTER">
+              <menus>
+                <Menu mnemonicParsing="false" text="Archivo">
+                  <items>
+                        <MenuItem mnemonicParsing="false" text="Nuevo" />
+                    <MenuItem mnemonicParsing="false" onAction="#evtAbrir" text="Abrir" />
+                        <MenuItem mnemonicParsing="false" text="Guardar" />
+                        <MenuItem mnemonicParsing="false" text="Guardar Como" />
+                        <MenuItem mnemonicParsing="false" onAction="#evtSalir" text="Salir" />
+                  </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Editar">
+                  <items>
+                        <MenuItem mnemonicParsing="false" text="Seleccionar todo" />
+                    <MenuItem mnemonicParsing="false" text="Copiar" />
+                        <MenuItem mnemonicParsing="false" text="Pegar" />
+                  </items>
+                </Menu>
+                  <Menu mnemonicParsing="false" text="Ejecutar">
+                     <items>
+                        <MenuItem mnemonicParsing="false" onAction="#ejecutar" text="Lanzar" />
+                     </items>
+                  </Menu>
+                <Menu mnemonicParsing="false" text="Ayuda">
+                  <items>
+                    <MenuItem mnemonicParsing="false" text="About" />
+                  </items>
+                </Menu>
+              </menus>
+            </MenuBar>
+         </top>
+         <left>
+            <VBox prefHeight="200.0" prefWidth="150.0" styleClass="paneIzq" stylesheets="@../estilos.css" BorderPane.alignment="CENTER">
+               <children>
+                  <Accordion>
+                    <panes>
+                      <TitledPane animated="false" text="Proyecto">
+                        <content>
+                          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                 <children>
+                                    <TreeView fx:id="TreeProyecto" prefHeight="200.0" prefWidth="150.0" />
+                                 </children>
+                              </AnchorPane>
+                        </content>
+                      </TitledPane>
+                      <TitledPane animated="false" text="Librerias">
+                        <content>
+                          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+                        </content>
+                      </TitledPane>
+                      <TitledPane animated="false" text="Herramientas">
+                        <content>
+                          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+                        </content>
+                      </TitledPane>
+                    </panes>
+                  </Accordion>
+               </children>
+            </VBox>
+         </left>
+      </BorderPane>
+   </children>
+</AnchorPane>
